@@ -12,8 +12,6 @@ export default GlobalStyle ;
 
 const Global = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
     html{
         font-size: 62.5%;
         box-sizing: border-box;

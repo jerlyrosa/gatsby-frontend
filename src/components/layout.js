@@ -1,5 +1,5 @@
 import React  from "react";
-import Header from "./header";
+import HeaderComponent from "./header";
 import { Helmet } from "react-helmet";
 import 'normalize.css';//
 import GlobalStyle from "./styles/global-styles";
@@ -13,8 +13,11 @@ const Layout  = ( { children } )=> {
         <Helmet>
             <title>Vikingos web</title>
             <meta name="description"  content="Sitio web en Gataby"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"/>
         </Helmet>
-        <Header/>
+        <HeaderComponent/>
         { children }
         </>
     )
