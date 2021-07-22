@@ -1,16 +1,28 @@
 import React  from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery,graphql } from 'gatsby';
 import styled from "styled-components";
 import Navigation from './navigation';
 
 
-
 const HeaderComponent = ( )=> {
+
+    //Peticion del logo.svg
+    const {logo} = useStaticQuery(graphql`
+            query{
+                logo: file(relativePath: {eq: "logo.svg"}) {
+                publicURL
+                }
+            }
+      
+    
+    `);
+
+
     return(
         <Header>
             <StylesContainer>
                         <Link to='/'>
-                            Logo
+                            <img src={logo.publicURL} alt="Logotipo" height="70px" />
                         </Link> 
                         <Navigation/>
             </StylesContainer>
@@ -28,7 +40,6 @@ const Header = styled.header`
 `;
 
 const StylesContainer = styled.div`
-    padding: 1rem;
     max-width: 120rem;
     margin: 0 auto;
     text-align:center;

@@ -14,10 +14,6 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-      // resolve: `gatsby-plugin-styled-components`,
-      // options: {
-      //   // Add any options here
-      // },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
